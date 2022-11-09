@@ -297,7 +297,15 @@
             top: 90%;
 
             @media screen and (max-width: 420px) {
-                top: 280px;
+                top: 230px;
+            }
+
+            @media screen and (max-width: 370px) {
+                top: 250px;
+            }
+
+            @media screen and (max-width: 320px) {
+                top: 290px;
             }
 
             .swiper-pagination-bullet {
@@ -311,6 +319,10 @@
             max-width: 890px;
             margin: 100px auto 0 auto;
             text-align: center;
+
+            @media screen and (max-width: 570px) {
+                margin: 50px auto 0 auto;
+            }
 
             .useCases__contact_text {
                 font-size: 18px;
@@ -683,7 +695,7 @@
     transition: .3s ease;
 
     &.showArrow {
-        top: 88%;
+        top: 90%;
     }
 
     a {
