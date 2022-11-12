@@ -8,7 +8,7 @@ header {
         transform: translateX(-50%);
         width: 100.1%;
         height: 70px;
-        z-index: 999;
+        z-index: 900;
         background-color: $green;
         transition: .3s ease;
 
@@ -25,6 +25,18 @@ header {
                 @media screen and (min-width: 931px) {
                     display: none;
                 }
+            }
+        }
+
+        &.boardDarkNav {
+            &::after {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                background-color: rgba(0, 0, 0, 0.849);
             }
         }
 
@@ -74,6 +86,14 @@ header {
                                 }
 
                                 &:hover {
+                                    &::after {
+                                        width: 30px;
+                                    }
+                                }
+
+                                &.linkActive {
+                                    background-color: red;
+
                                     &::after {
                                         width: 30px;
                                     }
@@ -263,6 +283,172 @@ header {
                             color: #ffffff;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .login__board {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 700px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        background-color: $blue;
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.233);
+        border-radius: 50px;
+        padding: 30px;
+        visibility: hidden;
+        overflow: hidden;
+        z-index: 950;
+        transition: .2s ease;
+
+        &.showBoard {
+            visibility: visible;
+            width: 90%;
+            height: 600px;
+            opacity: 1;
+        }
+
+        .login__board_close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+
+            .close_line {
+                position: absolute;
+                top: 50%;
+                left: 17%;
+                transform: translate(-50%, -50%);
+                width: 27px;
+                height: 3px;
+                background-color: #ffffff;
+            }
+
+            .close_line1 {
+                transform: rotate(-45deg);
+            }
+
+            .close_line2 {
+                transform: rotate(45deg);
+            }
+        }
+
+        .login__title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            color: #dadada;
+            letter-spacing: 2px;
+
+            @media screen and (max-width: 520px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 420px) {
+                margin-top: 30px;
+            }
+        }
+
+        .login__inputs {
+            min-height: 330px;
+            max-width: 350px;
+            margin: 40px auto 0 auto;
+
+            @media screen and (max-width: 370px) {
+                margin: 0 auto;
+            }
+
+            .login_input {
+                width: 100%;
+                height: 50px;
+                border: 2px solid rgba(255, 255, 255, 0.24);
+                border-radius: 50px;
+                padding: 0 15px;
+                margin-top: 15px;
+                font-size: 17px;
+                background-color: transparent;
+                color: #ffffff;
+                letter-spacing: 1px;
+
+                @media screen and (max-width: 420px) {
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+
+                &::placeholder {
+                    color: #ffffff8c;
+                    transition: .2s ease;
+                }
+
+                &:focus {
+                    border: 2px solid #00CA90;
+
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .log_in_btn {
+                border: none;
+                padding: 7px 40px;
+                margin-top: 22px;
+                text-align: center;
+                background-color: transparent;
+                color: #ffffff;
+                border: 2px solid #ffffff;
+                border-radius: 50px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: .2s ease;
+
+                &:hover {
+                    background-color: #00CA90;
+                    border: 2px solid #00CA90;
+                }
+
+                @media screen and (max-width: 420px) {
+                    font-size: 16px;
+                    padding: 10px 50px;
+                }
+            }
+
+            .withGoogle_btn {
+                @media screen and (max-width: 370px) {
+                    padding: 7px 30px;
+                }
+            }
+
+            .forrgot {
+                margin-top: 35px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #777777;
+
+                a {
+                    color: #cfcfcf;
+                    transition: .2s ease;
+                    letter-spacing: 1px;
+                    font-size: 15px;
+
+                    &:hover {
+                        color: #00CA90;
+                    }
+                }
+            }
+
+            .signup__account_btn {
+                margin-top: 30px;
+
+                .signup_text {
+                    color: #ffffff;
                 }
             }
         }

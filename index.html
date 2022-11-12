@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="header__btns">
-                    <button class="header_btn login_btn">Login</button>
-                    <button class="header_btn">Get API Keys</button>
+                    <button class="header_btn login_btn btnForLogin">Login</button>
+                    <button class="header_btn btnForLogin">Get API Keys</button>
                 </div>
 
                 <div class="burger">
@@ -77,12 +77,42 @@
                     </ul>
 
                     <div class="navside_btns">
-                        <button class="header_btn login_btn">Login</button>
-                        <button class="header_btn">Get API Keys</button>
+                        <button class="header_btn login_btn btnForLogin">Login</button>
+                        <button class="header_btn btnForLogin">Get API Keys</button>
                     </div>
                 </nav>
             </div>
         </section>
+
+        <!-- ============================= Login or Sign up to Cloverly =============================== -->
+        <div class="login__board container">
+            <div class="login__board_close">
+                <div class="close_line1 close_line"></div>
+                <div class="close_line2 close_line"></div>
+            </div>
+
+            <form action="">
+                <p class="login__title">LOGIN TO CLOVERLY</p>
+                <div class="login__inputs">
+                    <input class="login_input" placeholder="Email" type="email" required>
+                    <input class="login_input" placeholder="Password" type="password" required>
+
+                    <div class="log_in__buttons">
+                        <button class="log_in_btn" type="submit">Login</button>
+                        <button class="log_in_btn withGoogle_btn" type="button">Login With Google</button>
+                    </div>
+
+                    <div class="forrgot">
+                        <a href="#/">Forgot Your Password?</a>
+                    </div>
+
+                    <div class="signup__account_btn">
+                        <p class="signup_text">Don't have an Cloverly account?</p>
+                        <button class="sign_up__account_btn log_in_btn" type="button">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
         <div class="container">
             <div class="header__content">
@@ -100,8 +130,8 @@
                         </p>
 
                         <div class="header__content_btns">
-                            <button class="header__content_btn header_white_btn">Get Started</button>
-                            <button class="header__content_btn header_dark_btn">Let's Talk</button>
+                            <button class="header__content_btn header_white_btn btnForLogin">Get Started</button>
+                            <button class="header__content_btn header_dark_btn btnForLogin">Let's Talk</button>
                         </div>
                     </div>
                     <div class="header__content_image_item">
@@ -130,8 +160,8 @@
                     </p>
 
                     <div class="api__btns">
-                        <button class="api_btn green_btn">Get Started for Free</button>
-                        <button class="api_btn blue_btn">Let's Talk</button>
+                        <button class="api_btn green_btn btnForLogin">Get Started for Free</button>
+                        <button class="api_btn blue_btn btnForLogin">Let's Talk</button>
                     </div>
                 </div>
                 <div class="api__image_item">
@@ -156,7 +186,7 @@
                         </p>
 
                         <div class="product__btn">
-                            <button class="learn_more_btn">Learn More</button>
+                            <button class="learn_more_btn btnForLogin">Learn More</button>
                         </div>
                     </div>
 
@@ -372,7 +402,7 @@
                         </p>
 
                         <div class="useCases__contact_btn">
-                            <button class="useCases_btn">Contact Us</button>
+                            <button class="useCases_btn btnForLogin">Contact Us</button>
                         </div>
                     </div>
                 </div>
@@ -394,8 +424,8 @@
                         </p>
 
                         <div class="developers__buttons">
-                            <button class="developers_btn green_btn">Get API Keys</button>
-                            <button class="developers_btn white_btn">Developer Docs</button>
+                            <button class="developers_btn green_btn btnForLogin">Get API Keys</button>
+                            <button class="developers_btn white_btn btnForLogin">Developer Docs</button>
                         </div>
                     </div>
                     <div class="developers__image_item">
@@ -448,7 +478,7 @@
                         </div>
 
                         <div class="partner__button">
-                            <button class="morder_partners_btn">More Partners</button>
+                            <button class="morder_partners_btn btnForLogin">More Partners</button>
                         </div>
                     </div>
                 </div>
@@ -461,7 +491,7 @@
                     <p class="blue_title">What Activities Will You Offset?</p>
                     <p class="blog__card_text">Neutralize your carbon footprint with the Cloverly API.</p>
                     <div class="blog__card_button">
-                        <button class="card_btn">Try Cloverly</button>
+                        <button class="card_btn btnForLogin">Try Cloverly</button>
                     </div>
                 </div>
 
@@ -470,7 +500,7 @@
                     <div class="blue_title">The Latest in the World of Sustainability</div>
 
                     <div class="blog__button">
-                        <button class="blog_btn">Read More</button>
+                        <button class="blog_btn btnForLogin">Read More</button>
                     </div>
                 </div>
             </div>
@@ -479,7 +509,8 @@
         <div class="toUpArrow">
             <a href="#">
                 <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1005.9 691c11.2 11.2 16.7 25.8 16.7 40.5 0 14.6-5.5 29.3-16.7 40.5-22.3 22.3-58.5 22.3-80.8 0L511.4 358.1 97.6 771.7c-22.3 22.3-58.5 22.3-80.8 0-22.3-22.3-22.3-58.5 0-80.8L446.7 261c17.3-17.3 40.2-26.7 64.7-26.7s47.4 9.5 64.7 26.7l429.8 430z m0 0" />
+                    <path
+                        d="M1005.9 691c11.2 11.2 16.7 25.8 16.7 40.5 0 14.6-5.5 29.3-16.7 40.5-22.3 22.3-58.5 22.3-80.8 0L511.4 358.1 97.6 771.7c-22.3 22.3-58.5 22.3-80.8 0-22.3-22.3-22.3-58.5 0-80.8L446.7 261c17.3-17.3 40.2-26.7 64.7-26.7s47.4 9.5 64.7 26.7l429.8 430z m0 0" />
                 </svg>
             </a>
         </div>
@@ -508,8 +539,8 @@
                     </div>
 
                     <div class="footer__login">
-                        <button class="footer_btn login_btn">Login</button>
-                        <button class="footer_btn">Get API Keys</button>
+                        <button class="footer_btn login_btn btnForLogin">Login</button>
+                        <button class="footer_btn btnForLogin">Get API Keys</button>
                     </div>
                 </div>
 
@@ -584,7 +615,8 @@
                         </p>
                     </div>
 
-                    <p class="by">By <a href="https://avetisharutyunyan.github.io/" target="_blank">Avetis Harutyunyan</a></p>
+                    <p class="by">By <a href="https://avetisharutyunyan.github.io/" target="_blank">Avetis
+                            Harutyunyan</a></p>
                 </div>
             </div>
         </section>

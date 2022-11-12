@@ -14,6 +14,11 @@ $textBlue: #013A51;
     outline: none;
 }
 
+::selection {
+    background-color: #00CA90;
+    color: #ffffff;
+}
+
 body {
 
     &.darkBody {
@@ -32,6 +37,21 @@ body {
             @media screen and (min-width: 931px) {
                 display: none;
             }
+        }
+    }
+
+    &.scrollHidden {
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.849);
+            z-index: 510;
         }
     }
 
